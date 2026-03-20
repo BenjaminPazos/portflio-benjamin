@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sobre Mim | Benjamin</title>
+    <link rel="shortcut icon" href="ben_10_icon_by_subwooferlabs_dfk4i23-pre.ico">
+    <style>
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            list-style: none;
+        }
+
+        nav a {
+            display: block;
+            width: 200px;
+            text-align: center;
+
+            text-decoration: none;
+            font-size: 40px;
+            color: gray;
+            
+            background-color: white;
+        }
+
+        nav a.ativo {
+            color: rgb(50, 181, 49);
+            font-weight: bold;
+            font-size: 40px;
+            opacity: 1;
+            transform: translate(0px, 50px);
+
+            animation: mudar 2s ease forwards;
+        }
+
+        nav a:not(.ativo):hover {
+            color: rgb(50, 181, 49);
+            transition: 0.3s;
+            font-size: 45px;
+        }
+
+        nav a.inicio {
+            animation: inicio 2s ease forwards;
+        }
+
+        @keyframes mudar {
+            from {
+                transform: translate(0px, 50px);
+                background: none;
+            }
+            50%{
+                background: none;
+            }
+            to {
+                transform: translate(260px, 0);
+            }
+        }
+
+        @keyframes inicio {
+            from {
+                transform: translate(0px, 0px);
+                background: none;
+            }
+            50%{
+                background: none;
+            }
+            to {
+                transform: translate(-260px, 0);
+            }
+        }
+        @keyframes texto {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .circulo {
+            position: absolute;
+            left: 340px;
+            top: -250px;
+
+
+            width: 600px;
+            height: 400px;
+            border-radius: 50%;
+            border: solid rgb(50, 181, 49);
+            opacity: 0.5;
+
+            background-color: transparent;
+            z-index: -1;
+
+        }
+        .texto {
+            position: absolute;
+            top: 90px;
+            left: 510px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            width: 280px;
+            
+
+            background-color: white;
+            
+            overflow-wrap: break-word;
+            word-break: break-word;
+            overflow: hidden;
+
+        }
+
+        p {
+            font-size: 20px;
+            color: rgb(50, 181, 49);
+            animation: texto 4s;
+        }
+        .github {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 0;
+
+            margin-top: 150px;
+            margin-left:25px;
+
+          
+    
+
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="sobreMim.html" class="ativo">Sobre Mim</a></li>
+            <li><a href="inicio.html" class="inicio">Início</a></li>
+            <li><a href="projetos.html">Projetos</a></li>
+
+        </ul>
+    </nav>
+    <div class="circulo"></div>
+    <p class="texto">Me chamo Benjamin Henrique Barudi Pazos, comecei a progamar no IFPR em Php e Html, sou iniciante</p>
+    <a class="github" href="https://github.com/BenjaminPazos">
+                <img src="data:image/webp;base64,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" width="70">
+            </a>
+</body>
+
+</html>
